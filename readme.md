@@ -3,7 +3,7 @@
 This plugin has been created to show post nearby on a map based on user location .
 
 ## Feature
-* wp-api-acf-location is a plugin that add location to your posts using ACF
+* Add location to your posts using ACF
 * Geo query custom REST API endpoint
 * Lightened Api response to the basic need
 
