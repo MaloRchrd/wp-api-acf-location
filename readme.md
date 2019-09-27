@@ -56,7 +56,7 @@ http://exemple.com/wp-json/acf-location/v1/posts/cat=3/lat=48.852/long=2.349/dis
 
 
 ## Todo
-
+* ~~Category support~~
 * Admin page
     * Register goole map api key
     * Allow custom post type
