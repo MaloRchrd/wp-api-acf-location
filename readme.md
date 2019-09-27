@@ -1,20 +1,20 @@
 # Wp-api-acf-location
 
 ## Feature
-⋅⋅* wp-api-acf-location is a plugin that add location to your posts using ACF
-⋅⋅* Geo query custom REST API endpoint
+* wp-api-acf-location is a plugin that add location to your posts using ACF
+* Geo query custom REST API endpoint
 
 
 ## Setup
-⋅⋅* For the plugin to work you need to have [ACF](https://fr.wordpress.org/plugins/advanced-custom-fields/) installed
-⋅⋅* Replace ``` GMAP_API_KEY ```  with your own key in gmap-apikey.php file
-⋅⋅* that's it ;-)
+* For the plugin to work you need to have [ACF](https://fr.wordpress.org/plugins/advanced-custom-fields/) installed
+* Replace ``` GMAP_API_KEY ```  with your own key in ```gmap-apikey.php``` file
+* that's it ;-)
 
 ## Custom endpoint
 Parameters
-⋅⋅* lat
-⋅⋅* long
-⋅⋅* dist (in km)
+* lat
+* long
+* dist (km)
 
 ### Exemple
 ```
