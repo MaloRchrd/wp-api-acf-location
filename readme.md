@@ -5,6 +5,7 @@ This plugin has been created to show post nearby on a map based on user location
 ## Feature
 * Add location to your posts using ACF
 * Geo query custom REST API endpoint
+* Category filtering (multi-categories support)
 * Lightened Api response to the basic need
 
 
@@ -13,18 +14,27 @@ This plugin has been created to show post nearby on a map based on user location
 * Replace ``` GMAP_API_KEY ```  with your own key in ```gmap-apikey.php``` file
 * That's it ;-)
 
-## Custom endpoint
+## Custom API endpoint
 Parameters
 * lat
 * long
 * dist (km)
 
 ### Exemple request
+
+#### Location
 ```
-http://exemple.com/wp-json/acf-location/v1/posts/lat=48.85296820000001/long=2.3499021000000084/dist=10/
+http://exemple.com/wp-json/acf-location/v1/posts/lat=48.852/long=2.349/dist=10/
 ```
 
-## Exemple response
+#### Location + Category
+```
+http://exemple.com/wp-json/acf-location/v1/posts/cat=3/lat=48.852/long=2.349/dist=10/
+```
+
+
+
+### Exemple response
 ```json
 {
 	"id": 25,
@@ -47,7 +57,6 @@ http://exemple.com/wp-json/acf-location/v1/posts/lat=48.85296820000001/long=2.34
 
 ## Todo
 
-* Add category filter
 * Admin page
     * Register goole map api key
     * Allow custom post type

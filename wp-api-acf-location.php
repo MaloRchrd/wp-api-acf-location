@@ -17,7 +17,8 @@ function acf_location_api($loc){
 
 	$args = [
 		'numberposts' => 99999,
-		'post_type' => 'post'
+		'post_type' => 'post',
+		'category' => $loc['cat']
 	];
 	$posts = get_posts($args);
 	$data = [];
@@ -28,9 +29,12 @@ function acf_location_api($loc){
 		$disance  = vincentyGreatCircleDistance(
 	     $loc['lat'], $loc['long'], $location['lat'], $location['lng'], $earthRadius = 6371000);
 		 $maxdist = $loc['dist'] * 1000;
+		 $cat = get_the_category($post->ID);
 
 		if ($disance < $maxdist) {
 			$data[$i]['id'] = $post->ID;
+			$data[$i]['categoryid'] = $cat;
+			$data[$i]['category'] = $cat[0]->name;
 			$data[$i]['title'] = $post->post_title;
 			$data[$i]['content'] = $post->post_content;
 			$data[$i]['slug'] = $post->post_name;
@@ -50,6 +54,12 @@ function acf_location_api($loc){
 add_action('rest_api_init',function(){
 
 	register_rest_route('/acf-location/v1', 'posts/lat=(?P<lat>[a-z0-9 .\-]+)/long=(?P<long>[a-z0-9 .\-]+)/dist=(?P<dist>[a-z0-9 .\-]+)',[
+		'methods' => 'GET',
+		'callback' => 'acf_location_api',
+
+	]);
+
+	register_rest_route('/acf-location/v1', 'posts/cat=(?P<cat>[a-z0-9 ,\-]+)/lat=(?P<lat>[a-z0-9 .\-]+)/long=(?P<long>[a-z0-9 .\-]+)/dist=(?P<dist>[a-z0-9 .\-]+)',[
 		'methods' => 'GET',
 		'callback' => 'acf_location_api',
 
