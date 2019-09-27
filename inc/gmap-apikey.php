@@ -1,7 +1,7 @@
 <?php
 
 
-// register Google map api key for ACF plugin
+// register Google map API key for ACF plugin
 function my_acf_google_map_api( $api ){
 
 	$api['key'] = 'GMAP_API_KEY';

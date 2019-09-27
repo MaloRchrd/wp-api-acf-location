@@ -52,3 +52,4 @@ http://exemple.com/wp-json/acf-location/v1/posts/lat=48.85296820000001/long=2.34
     * Register goole map api key
     * Allow custom post type
 * Map template.
+* More

@@ -2,7 +2,7 @@
 /*
 Plugin Name:  WP API ACF location
 Plugin URI: https://github.com/MaloRchrd/wp-api-acf-location
-Description: This plugin add location to you posts and customize wordrpress REST API to perform geo-query based on ACF latitude and longitude field.
+Description: This plugin add location to you posts and customize wordrpress REST API to perform geo-query based on ACF latitude and longitude fields.
 Version: 0.0.1
 Author: Malo Richard
 Author URI: https://github.com/MaloRchrd
