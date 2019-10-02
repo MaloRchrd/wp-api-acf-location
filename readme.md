@@ -11,7 +11,7 @@ This plugin has been created to show post nearby on a map based on user location
 
 ## Setup
 * For the plugin to work you need to have [ACF](https://fr.wordpress.org/plugins/advanced-custom-fields/) installed
-* Replace ``` GMAP_API_KEY ```  with your own key in ```gmap-apikey.php``` file
+* Go to Setting > REST API Location then add you google map api key
 * That's it ;-)
 
 ## Custom API endpoint
